@@ -117,7 +117,7 @@ function App() {
         addToHistory(dest);
 
         try {
-            const url = `http://router.project-osrm.org/route/v1/${mode}/${userPos[1]},${userPos[0]};${dest.lon},${dest.lat}?overview=full&geometries=geojson&steps=true`;
+            const url = `https://router.project-osrm.org/route/v1/${mode}/${userPos[1]},${userPos[0]};${dest.lon},${dest.lat}?overview=full&geometries=geojson&steps=true`;
 
             const res = await axios.get(url);
 
