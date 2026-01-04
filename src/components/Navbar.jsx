@@ -11,8 +11,8 @@ const Navbar = ({ view, setView, showHistory, toggleMapLayer, hideDesktop = fals
                         className="flex items-center gap-2 font-bold text-xl text-white cursor-pointer"
                         onClick={() => setView('home')}
                     >
-                        <div className="bg-blue-600 p-1.5 rounded-lg animate-float-icon">
-                            <Map className="w-5 h-5 text-white" />
+                        <div className="bg-blue-600/20 p-1 rounded-lg animate-float-icon backdrop-blur-sm border border-blue-500/30">
+                            <img src="/logo.png" alt="Logo" className="w-6 h-6 object-contain" />
                         </div>
                         <span className="tracking-tight">MiniMapper</span>
                     </div>
