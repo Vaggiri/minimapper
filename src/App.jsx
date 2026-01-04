@@ -174,7 +174,7 @@ function App() {
                             showHistory={() => setShowHistoryModal(true)}
                         />
                     </div>
-                    <div className="flex-grow flex flex-col items-center justify-start pt-24 pb-12 px-4 animate-in fade-in">
+                    <div className="flex-grow flex flex-col items-center justify-start pt-8 pb-12 px-4 animate-in fade-in">
                         <div className="text-center mb-8">
                             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent inline-block drop-shadow-sm">
                                 MiniMapper
