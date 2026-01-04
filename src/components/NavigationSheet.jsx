@@ -42,21 +42,21 @@ const NavigationSheet = ({ route, stepIndex, setStepIndex, onRecenter, onHome, o
 
             {/* Header */}
             <div className="flex justify-between items-center mb-6">
-                <h4 className="font-extrabold text-2xl lg:text-4xl text-white tracking-tight">Navigation</h4>
+                <h4 className="font-extrabold text-xl lg:text-3xl text-white tracking-tight">Navigation</h4>
                 <div className="bg-blue-900/30 text-blue-400 px-4 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-sm font-bold border border-blue-500/30">
                     Step {stepIndex + 1} / {steps.length}
                 </div>
             </div>
 
             {/* Instruction Card */}
-            <div className="mb-6 lg:mb-10 p-6 lg:p-10 bg-[#162032] rounded-[32px] border border-gray-800 shadow-xl relative overflow-hidden transition-all duration-300 hover:border-gray-700">
+            <div className="mb-6 lg:mb-8 p-6 lg:p-8 bg-[#162032] rounded-[24px] lg:rounded-[32px] border border-gray-800 shadow-xl relative overflow-hidden transition-all duration-300 hover:border-gray-700">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
 
                 <div className="flex justify-start gap-6 text-sm lg:text-lg text-gray-400 mb-4 uppercase tracking-wider font-semibold">
                     <span className="flex items-center gap-2"><Milestone className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" /> {currentStep.distance}m</span>
                     <span className="flex items-center gap-2"><Clock className="w-4 h-4 lg:w-5 lg:h-5 text-purple-400" /> {Math.round(currentStep.duration || 0)}s</span>
                 </div>
-                <p className="font-bold text-3xl lg:text-5xl text-white leading-tight">{currentStep.instruction}</p>
+                <p className="font-bold text-2xl lg:text-4xl text-white leading-tight">{currentStep.instruction}</p>
             </div>
 
             {/* Progress Bar */}
@@ -72,14 +72,14 @@ const NavigationSheet = ({ route, stepIndex, setStepIndex, onRecenter, onHome, o
                 <button
                     onClick={prevStep}
                     disabled={stepIndex === 0}
-                    className="flex-1 py-4 lg:py-6 px-4 border border-gray-700 text-white rounded-2xl disabled:opacity-30 hover:bg-gray-800 font-bold text-lg lg:text-2xl transition tracking-wide"
+                    className="flex-1 py-3 lg:py-4 px-4 border border-gray-700 text-white rounded-xl lg:rounded-2xl disabled:opacity-30 hover:bg-gray-800 font-bold text-base lg:text-lg transition tracking-wide"
                 >
                     Previous
                 </button>
 
                 <button
                     onClick={onRecenter}
-                    className="flex-none w-14 h-14 lg:w-20 lg:h-20 flex items-center justify-center bg-gray-800 border border-gray-700 rounded-2xl text-blue-400 hover:text-white hover:bg-gray-700 transition"
+                    className="flex-none w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center bg-gray-800 border border-gray-700 rounded-xl lg:rounded-2xl text-blue-400 hover:text-white hover:bg-gray-700 transition"
                 >
                     <LocateFixed className="w-6 h-6 lg:w-8 lg:h-8" />
                 </button>
@@ -87,7 +87,7 @@ const NavigationSheet = ({ route, stepIndex, setStepIndex, onRecenter, onHome, o
                 <button
                     onClick={nextStep}
                     disabled={stepIndex === steps.length - 1}
-                    className="flex-1 py-4 lg:py-6 px-4 bg-blue-600 text-white rounded-2xl disabled:opacity-30 hover:bg-blue-700 font-bold text-lg lg:text-2xl transition shadow-lg shadow-blue-600/20 flex justify-center items-center gap-2 tracking-wide"
+                    className="flex-1 py-3 lg:py-4 px-4 bg-blue-600 text-white rounded-xl lg:rounded-2xl disabled:opacity-30 hover:bg-blue-700 font-bold text-base lg:text-lg transition shadow-lg shadow-blue-600/20 flex justify-center items-center gap-2 tracking-wide"
                 >
                     Next <ArrowBigRight className="w-5 h-5 lg:w-8 lg:h-8" />
                 </button>
